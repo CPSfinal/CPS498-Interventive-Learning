@@ -1,0 +1,39 @@
+# General
+**/*.class
+**/*.log
+**/*.lock
+**/*.swp
+**/*~
+**/.DS_Store
+**/Thumbs.db
+
+# IDEs
+**/.idea/
+**/.classpath
+**/.project
+**/.settings/
+**/*.iml
+**/*.ipr
+**/*.iws
+
+# Build tools
+**/target/
+**/build/
+**/out/
+**/dependency-reduced-pom.xml
+**/node_modules/
+
+# Spring Boot
+**/*.jar
+**/*.war
+**/.gradletasknamecache
+**/.sts4-cache
+**/git-hooks/
+**/.git-hooks/
+**/.gradle/
+
+# Sensitive data
+**/application*.properties
+**/env.properties
+**/credentials.yml
+**/keystore.jks
