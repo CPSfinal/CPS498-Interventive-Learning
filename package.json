@@ -1,0 +1,21 @@
+{
+    "name": "cps498-interventive-learning",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server ./build",
+        "build": "parcel build ./frontend/public/index.html --public-url ./",
+        "serve": "npm run build && npm run start"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "parcel-bundler": "^1.12.5",
+        "sass": "^1.83.4"
+    }
+}

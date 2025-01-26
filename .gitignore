@@ -6,6 +6,11 @@
 **/*~
 **/.DS_Store
 **/Thumbs.db
+# parcel chache
+.cache/
+
+# Local Build output
+dist/
 
 # IDEs
 **/.idea/
