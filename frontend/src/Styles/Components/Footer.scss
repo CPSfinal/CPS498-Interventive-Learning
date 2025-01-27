@@ -1,0 +1,40 @@
+@use 'sass:color';
+@use '../variables' as *;
+
+.footer {
+  background-color: $footer-background; /* Dark footer background */
+  color: $footer-text-color; /* Light gray text */
+  padding: $spacing-medium; /* Medium spacing for padding */
+  text-align: center; /* Center align text */
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Spread content evenly */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center content within the page */
+
+    p {
+      margin: 0;
+      font-size: $footer-font-size; /* Footer font size */
+      color: $footer-text-color; /* Light gray text color */
+    }
+
+    .github-link {
+      color: $footer-link-color; /* White link text */
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: $spacing-small; /* Space between text and icon */
+
+      &:hover {
+        color: $button-hover-color; /* Purple hover color */
+      }
+
+      .github-icon {
+        font-size: $font-size-medium; /* Medium font size for icon */
+      }
+    }
+  }
+}
+
