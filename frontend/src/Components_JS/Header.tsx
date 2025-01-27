@@ -12,38 +12,38 @@ const Header = () => {
   
           {/* Navigation */}
           <nav className="nav-menu">
-            <ul>
-              <li>
-                <a href="#features">Features</a>
-                <div className="mega-menu">
-                  <ul>
-                    <li>
-                      <a href="#boards">Boards</a>
-                      <p>See and track your work on Kanban boards</p>
-                    </li>
-                    <li>
-                      <a href="#docs">Docs</a>
-                      <p>Document and collaborate on your work</p>
-                    </li>
-                    <li>
-                      <a href="#roadmaps">Roadmaps</a>
-                      <p>Track development workloads, organize</p>
-                    </li>
-                    <li>
-                      <a href="#milestones">Milestones</a>
-                      <p>Visualize checkpoints across your teams</p>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#pricing">Pricing</a>
-              </li>
-              <li>
-                <a href="#resources">Resources</a>
-              </li>
-            </ul>
-          </nav>
+  <ul>
+    <li>
+      <a href="#features">Features</a>
+      <div className="mega-menu">
+        <ul>
+          <li>
+            <a href="#student-analytics">Student Analytics</a>
+            <p>Monitor student progress with detailed analytics and insights.</p>
+          </li>
+          <li>
+            <a href="#ai-platform">AI Features</a>
+            <p>Engage students with AI-driven assessments and learning modules.</p>
+          </li>
+          <li>
+            <a href="#curriculum-tracking">Curriculum Tracking</a>
+            <p>Follow student progress across standards and proficiencies.</p>
+          </li>
+          <li>
+            <a href="#multi-language">Multi-Language Support</a>
+            <p>Offer assessments and learning modules in multiple languages.</p>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a href="#pricing">Pricing</a>
+    </li>
+    <li>
+      <a href="#resources">Resources</a>
+    </li>
+  </ul>
+</nav>
   
           {/* Search, Sign-in, and Sign-up */}
           <div className="actions">
