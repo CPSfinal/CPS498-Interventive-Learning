@@ -11,16 +11,15 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: linear-gradient(to bottom, color.adjust($primary-color, $lightness: 20%), $secondary-color);
+  //background: linear-gradient(to bottom, color.adjust($primary-color, $lightness: 20%), $secondary-color);
   text-align: center;
 }
 
 // Main container (the card)
 .home-main {
-  background: $secondary-color;
+  background: transparent;
   padding: $spacing-large $spacing-medium;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   max-width: 800px;
   width: 90%; // Responsive width
 
@@ -74,17 +73,17 @@
 
 // Responsive adjustments
 @media (max-width: 768px) {
-  .home-main {
-    padding: $spacing-small;
+  // .home-main {
+  //   padding: $spacing-small;
 
-    h1 {
-      font-size: 2.5rem;
-    }
+  //   h1 {
+  //     font-size: 2.5rem;
+  //   }
 
-    p {
-      font-size: 1.2rem;
-    }
-  }
+  //   p {
+  //     font-size: 1.2rem;
+  //   }
+  // }
 
   .buttons {
     flex-direction: column;
