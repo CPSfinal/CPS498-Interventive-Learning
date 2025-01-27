@@ -4,3 +4,19 @@
 
 // Import components like HomePage styles
 @use './Pages/HomePage' as *;
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Ensure the root spans the entire viewport */
+    box-sizing: border-box; /* Include padding in width and height calculations */;
+  }
+  
+  #root {
+    display: flex; /* Optional: If you want to control layout with flexbox */
+    flex-direction: column; /* Stack children vertically */
+  }
+
+
+  
