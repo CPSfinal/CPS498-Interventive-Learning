@@ -1,0 +1,6 @@
+// Import variables and globals
+@use './variables' as *;
+@use './globals' as *;
+
+// Import components like HomePage styles
+@use './Pages/HomePage' as *;

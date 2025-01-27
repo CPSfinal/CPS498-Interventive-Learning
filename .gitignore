@@ -1,44 +1,24 @@
-# General
-**/*.class
-**/*.log
-**/*.lock
-**/*.swp
-**/*~
-**/.DS_Store
-**/Thumbs.db
-# parcel chache
-.cache/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Local Build output
-dist/
+node_modules
+dist
+dist-ssr
+*.local
 
-# IDEs
-**/.idea/
-**/.classpath
-**/.project
-**/.settings/
-**/*.iml
-**/*.ipr
-**/*.iws
-
-# Build tools
-**/target/
-**/build/
-**/out/
-**/dependency-reduced-pom.xml
-**/node_modules/
-
-# Spring Boot
-**/*.jar
-**/*.war
-**/.gradletasknamecache
-**/.sts4-cache
-**/git-hooks/
-**/.git-hooks/
-**/.gradle/
-
-# Sensitive data
-**/application*.properties
-**/env.properties
-**/credentials.yml
-**/keystore.jks
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,20 @@
+@use 'sass:color';
+// Color Palette
+$primary-color: #3498db; // Blue
+$secondary-color: #ffffff; // White
+$accent-color: #f39c12; // Orange
+$text-color: #333; // Dark Gray
+$background-color: #f4f4f4; // Light Gray Background
+$button-color: #9b59b6; // Purple
+$button-hover-color: color.adjust($button-color, $lightness: -10%); // Button hover effect
+
+// Font and Typography
+$font-family-base: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+$font-size-large: 2rem;
+$font-size-medium: 1.5rem;
+
+// Spacing Variables
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
