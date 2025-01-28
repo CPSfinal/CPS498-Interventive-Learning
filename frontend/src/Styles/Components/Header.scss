@@ -1,28 +1,25 @@
-@use '../variables' as *;
-@use 'sass:color';
+@use "../variables" as *;
+@use "sass:color";
 
 .header {
   background-color: $header-background; // Dark background
-  position: sticky; /* Keeps the header fixed while scrolling */
   top: 0; /* Ensures it stays at the top of the page */
   z-index: 1000; /* Ensures the header stays above other elements */
-  width: 100%; /* Ensures the header spans the entire width */
-  padding: .25rem 0; /* Top and bottom padding for spacing */
-  box-shadow: $shadow-color; /* Optional shadow for visibility */
-  
+  padding: 12px 24px; /* Top and bottom padding for spacing */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding-top: 2rem;
-    height: 100px;
-    max-width: 1200px;
+    max-height: 73px;
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+      padding: 0;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 17%;
 
       a {
         text-decoration: none;
@@ -31,6 +28,11 @@
     }
 
     .nav-menu {
+      width: 76%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       ul {
         display: flex;
         list-style: none;
@@ -98,14 +100,15 @@
     .actions {
       display: flex;
       align-items: center;
+      width: 17%;
 
       .search-bar {
-        border: 1px solid $border-color;
-        background-color: $background-color;
+        background-color: $search-background-color;
+        border: none;
         color: $text-color;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        margin-right: 1rem;
+        padding: 0.5rem 0.5rem;
+        border-radius: 100px;
+        margin-right: 2em;
 
         &::placeholder {
           color: $secondary-text-color;
@@ -126,7 +129,7 @@
       .sign-in {
         color: $button-color;
         background-color: transparent;
-        border: 1px solid $button-color;
+        border: none;
         margin-right: 0.5rem;
       }
 
@@ -139,7 +142,3 @@
     }
   }
 }
-
-
-
-  

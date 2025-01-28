@@ -1,45 +1,49 @@
-@use 'sass:color';
+@use "sass:color";
 // Color Palette
-$primary-color: #3B873D; 
-$secondary-color: #A8D5BA; 
-$tirtiary-color: #83C19E;
-$accent-color: #F7E64B; // Orange
+$primary-color: #81c784;
+$secondary-color: #c8e6c9;
+$tirtiary-color: #83c19e;
+$accent-color: #f7e64b; // Orange
 $background-color: #f4f4f4; // Light Gray Background
+$search-background-color: #c8e6c9;
 
 // Main Text Colors
 $text-color: #333; // Dark Gray
-$secondary-text-color: #888; // Light Gray
+$secondary-text-color: #f5f5f5; // Light Gray
 $light-text-color: #fff; // White
 
 // Font and Typography
-$font-family-base: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family-base: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
 $font-size-base: 16px;
 $font-size-large: 2rem;
 $font-size-medium: 1.5rem;
 
 // Buttons
-$button-color: $primary-color; // Purple
+$button-color: #388e3c; // Purple
 $button-text-color: $light-text-color; // White
 $alt-button-color: $light-text-color; // Green
 $button-secondary-color: $accent-color; // Yellow
 $logout-button-color: #ff0000; // Red
 $logout-button-text-color: $light-text-color; // White
-$button-hover-color: color.adjust($button-color, $lightness: -10%); // Button hover effect
+$button-hover-color: color.adjust(
+  $button-color,
+  $lightness: -10%
+); // Button hover effect
 
 //shadows & borders
 $shadow-color: rgba(0, 0, 0, 0.1); // Shadow color
-$drop-shadow: drop-shadow(0 0 2em #646cffaa); // Drop shadow effect
+$drop-shadow: drop-shadow(0 0 2em #000000); // Drop shadow effect
 $reaction-drop-shadow: drop-shadow(0 0 2em #61dafbaa); // Drop shadow effect
 $border-color: #333; // Light Gray border color
 $alt-border-color: #ccc; // Light Gray border color
 
 //Header
-$header-background: #1A2B2D;
-$header-text-color: #ffffff;
+$header-background: #f5f5f5;
+$header-text-color: #388e3c;
 
 //Footer
-$footer-background: #1A2B2D;
-$footer-text-color: #888;
+$footer-background: #ffffff00;
+$footer-text-color: #424242;
 $footer-font-size: 0.9rem;
 $footer-link-color: #ffffff;
 
