@@ -1,17 +1,30 @@
 @use 'sass:color';
 // Color Palette
-$primary-color: #3498db; // Blue
-$secondary-color: #ffffff; // White
-$accent-color: #f39c12; // Orange
+$primary-color: #3B873D; 
+$secondary-color: #A8D5BA; 
+$tirtiary-color: #83C19E;
+$accent-color: #F7E64B; // Orange
+$background-color: #f4f4f4; // Light Gray Background
+
+// Main Text Colors
 $text-color: #333; // Dark Gray
 $secondary-text-color: #888; // Light Gray
-$background-color: #f4f4f4; // Light Gray Background
-$button-color: #9b59b6; // Purple
-$button-secondary-color: #ccc; // Yellow
-$button-hover-color: color.adjust($button-color, $lightness: -10%); // Button hover effect
+$light-text-color: #fff; // White
 
-$border-color: #333; // Light Gray border color
-$alt-border-color: #ccc; // Light Gray border color
+// Font and Typography
+$font-family-base: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+$font-size-large: 2rem;
+$font-size-medium: 1.5rem;
+
+// Buttons
+$button-color: $primary-color; // Purple
+$button-text-color: $light-text-color; // White
+$alt-button-color: $light-text-color; // Green
+$button-secondary-color: $accent-color; // Yellow
+$logout-button-color: #ff0000; // Red
+$logout-button-text-color: $light-text-color; // White
+$button-hover-color: color.adjust($button-color, $lightness: -10%); // Button hover effect
 
 //shadows & borders
 $shadow-color: rgba(0, 0, 0, 0.1); // Shadow color
@@ -21,11 +34,11 @@ $border-color: #333; // Light Gray border color
 $alt-border-color: #ccc; // Light Gray border color
 
 //Header
-$header-background: #2c3e50;
+$header-background: #1A2B2D;
 $header-text-color: #ffffff;
 
 //Footer
-$footer-background: #34495e;
+$footer-background: #1A2B2D;
 $footer-text-color: #888;
 $footer-font-size: 0.9rem;
 $footer-link-color: #ffffff;
@@ -33,12 +46,7 @@ $footer-link-color: #ffffff;
 //Mega Menu
 $mega-menu-background: #1c1f26;
 $mega-menu-text-color: #ffffff;
-$mega-menu-link-color: #9b59b6;
-// Font and Typography
-$font-family-base: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-$font-size-base: 16px;
-$font-size-large: 2rem;
-$font-size-medium: 1.5rem;
+$mega-menu-link-color: $button-color;
 
 // Spacing Variables
 $spacing-small: 10px;
