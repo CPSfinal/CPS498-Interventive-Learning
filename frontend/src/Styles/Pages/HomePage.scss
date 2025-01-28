@@ -7,20 +7,19 @@
   font-family: $font-family-base;
   color: $text-color;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: linear-gradient(to bottom, color.adjust($primary-color, $lightness: 20%), $secondary-color);
   text-align: center;
 }
 
 // Main container (the card)
 .home-main {
-  background: $secondary-color;
+  background: transparent;
   padding: $spacing-large $spacing-medium;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   max-width: 800px;
   width: 90%; // Responsive width
 
@@ -65,7 +64,7 @@
 
         &:hover {
           background-color: $button-color;
-          color: $secondary-color;
+          color: $button-secondary-color;
         }
       }
     }

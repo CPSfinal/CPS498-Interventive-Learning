@@ -2,5 +2,18 @@
 @use './variables' as *;
 @use './globals' as *;
 
-// Import components like HomePage styles
-@use './Pages/HomePage' as *;
+
+#root {
+  width: 100vw; /* Full width of the viewport */
+  min-height: 100vh; /* Full height of the viewport */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack content vertically */
+  padding: 0; /* Remove padding to avoid extra spacing */
+  box-sizing: border-box; /* Include padding in width and height calculations */
+  background: linear-gradient(to right, $primary-color, $secondary-color); /* Add a gradient background */
+}
+
+
+
+
+  

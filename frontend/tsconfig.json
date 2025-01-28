@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "jsx": "react-jsx",
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true
+    },
+    "include": [
+      "src/**/*",          // Includes all files in the `src` directory
+      "vite.config.ts",    // Include your Vite configuration
+      "eslint.config.js"   // Include ESLint configuration if needed
+    ],
+    "exclude": [
+      "node_modules",      // Excludes dependencies
+      "dist",              // Excludes built files (if you have a `dist` folder)
+      "public"             // Excludes static public files
+    ]
+  }
+  
