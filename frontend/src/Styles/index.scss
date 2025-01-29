@@ -1,7 +1,6 @@
 // Import variables and globals
-@use './variables' as *;
-@use './globals' as *;
-
+@use "./variables" as *;
+@use "./globals" as *;
 
 #root {
   width: 100vw; /* Full width of the viewport */
@@ -10,10 +9,4 @@
   flex-direction: column; /* Stack content vertically */
   padding: 0; /* Remove padding to avoid extra spacing */
   box-sizing: border-box; /* Include padding in width and height calculations */
-  background: linear-gradient(to right, $primary-color, $secondary-color); /* Add a gradient background */
 }
-
-
-
-
-  

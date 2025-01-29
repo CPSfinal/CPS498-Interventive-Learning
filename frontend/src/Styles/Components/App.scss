@@ -1,7 +1,6 @@
-@use 'sass:color';
-@use '../variables' as *;
+@use "sass:color";
+@use "../variables" as *;
 /* Ensure the app spans the entire viewport */
-
 
 /* Logo styles */
 .logo {
@@ -28,5 +27,4 @@
   .logo {
     height: 4em; /* Adjust logo size */
   }
- 
 }
