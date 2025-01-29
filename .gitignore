@@ -52,6 +52,7 @@
 **/git-hooks/
 **/.git-hooks/
 **/.gradle/
+!**/gradle/wrapper/gradle-wrapper.jar
 
 # Sensitive data
 **/application*.properties
