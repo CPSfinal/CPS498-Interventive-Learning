@@ -1,11 +1,13 @@
-@use '../variables' as *;
-@use 'sass:color';
+@use "../variables" as *;
+@use "sass:color";
 
 // Teacher Dashboard Layout
 .teacher-dashboard {
   display: flex;
+  justify-content: center;
   height: 100vh; // Full viewport height
   background-color: $background-color; // Light background
+  margin-top: 3.125em;
 
   // Sidebar Styles
   .sidebar {
@@ -72,37 +74,11 @@
 
   // Main Section Styles
   .main-section {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 80%;
     background-color: $background-color;
-
-    // Top Bar Styles
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: $spacing-medium;
-      background-color: $primary-color;
-      color: $background-color;
-
-      .subject {
-        font-size: $font-size-large;
-        font-weight: bold;
-      }
-
-      .dropdowns {
-        display: flex;
-        gap: $spacing-small;
-
-        select {
-          padding: 0.5rem;
-          border-radius: 4px;
-          border: 1px solid $border-color;
-          font-size: $font-size-base;
-        }
-      }
-    }
 
     // Main Content Area
     .main-content {
@@ -118,7 +94,7 @@
 
       p {
         font-size: $font-size-base;
-        color: $secondary-text-color;
+        color: $text-color;
       }
     }
   }

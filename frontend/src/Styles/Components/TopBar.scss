@@ -1,27 +1,62 @@
-@use 'sass:color';
-@use '../variables' as *;
+@use "sass:color";
+@use "../variables" as *;
 
 .top-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  gap: 1.5rem;
+
+  .subject {
+    font-size: $font-size-large;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .tabs {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: $primary-color;
-    color: l$light-text-color;
-  
-    .subject {
-      font-size: 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    padding: 0;
+    border-bottom: 2px solid #c8e6c9;
+    list-style: none;
+
+    li {
+      display: inline-block;
     }
-  
-    .dropdowns {
-      display: flex;
-      gap: 1rem;
-  
-      select {
-        padding: 0.5rem;
-        border-radius: 4px;
-        border: 1px solid $border-color;
+
+    .tab-button {
+      font-size: 1.25rem;
+      font-weight: 400;
+      padding: 12px 0;
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-radius: 0px;
+      color: #333;
+      text-align: center;
+      min-width: 85px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      transition: border-bottom 1.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid #388e3c;
+        outline: none;
+      }
+
+      &.selected {
+        font-weight: 700;
+        border-bottom: 2px solid #388e3c;
       }
     }
   }
-  
+}

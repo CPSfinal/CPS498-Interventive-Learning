@@ -1,25 +1,34 @@
-import React from 'react';
-import '../Styles/Components/TopBar.scss';
+import React, { useState } from "react";
+import "../Styles/Components/TopBar.scss";
 
-const TopBar = () => {
+const tabs = ["Reading", "Math", "Classes", "Settings"] as const;
+type TabType = (typeof tabs)[number];
+
+const TopBar: React.FC = () => {
+  const [selectedTab, setSelectedTab] = useState<TabType>("Math");
+
   return (
-    <div className="top-bar">
-      <h1 className="subject">Reading</h1>
-      <div className="dropdowns">
-        <select title="Select State">
-          <option>Select State</option>
-          <option>Michigan</option>
-        </select>
-        < select title="Select Grade Level">
-          <option>Grade Level</option>
-          <option>K</option>
-        </select>
-        <select title= "Select Standard">
-          <option>View a Standard</option>
-          <option>K.2.B</option>
-        </select>
-      </div>
-    </div>
+    <section className="top-bar">
+      <h2 className="subject">Dashboard</h2>
+      <nav aria-label="Dashboard Tabs">
+        <ul className="tabs" role="tablist">
+          {tabs.map((tab) => (
+            <li key={tab} role="presentation">
+              <button
+                className={`tab-button ${
+                  selectedTab === tab ? "selected" : ""
+                }`}
+                role="tab"
+                aria-selected={selectedTab === tab}
+                onClick={() => setSelectedTab(tab)}
+              >
+                {tab}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </section>
   );
 };
 
