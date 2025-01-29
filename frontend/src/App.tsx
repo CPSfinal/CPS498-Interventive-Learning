@@ -1,7 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import TeacherDashboard from './pages/TeacherDashboard';
+import HomePage from './Pages/HomePage';
+import TeacherDashboard from './Pages/TeacherDashboard';
 import Header from './Components_JS/Header';
 import Footer from './Components_JS/Footer';
 import './Styles/Components/App.scss'
