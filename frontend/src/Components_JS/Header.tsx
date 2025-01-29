@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "../Styles/Components/Header.scss"; // Import the SCSS for styling
 import Logo from "../assets/Icon.svg"; // Import Logo
