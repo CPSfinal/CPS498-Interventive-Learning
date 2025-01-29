@@ -2,14 +2,6 @@
 @use "../variables" as *;
 @use "sass:color";
 
-body {
-  background: linear-gradient(
-    to right,
-    $primary-color,
-    $secondary-color
-  ); /* Add a gradient background */
-}
-
 // Root container for HomePage
 .home-page {
   font-family: $font-family-base;
@@ -18,8 +10,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 80px;
+  margin: 0px 0px;
+  padding: 0px 80px;
   text-align: center;
+  background: linear-gradient(
+    to right,
+    $primary-color,
+    $secondary-color
+  ); /* Add a gradient background */
 }
 
 // Main container (the card)
