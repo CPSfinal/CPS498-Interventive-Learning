@@ -1,0 +1,14 @@
+# Utility
+
+### Local properties
+- create ```application-local.properties``` and fill out the values
+```
+spring.datasource.username=insert_username_here
+spring.datasource.password=insert_password_here
+security.jwt.secret-key=insert_secret_here
+```
+- to run locally, modify the IDE run configuration to run the local profile
+  - In Intellij set the active profiles to 'local'
+  - The JVM system parameter is ```-Dspring.profiles.active=dev``` if using the command line
+- In an IDE you can run the application by right-clicking src/main/java/com.cmu.cps498.utility/IlUtilityApplication and selecting 'run'
+- Following the instructions to download and use the Spring cli provides another alternative to run the application
