@@ -12,4 +12,4 @@ security.jwt.secret-key=insert_secret_here
   - In Intellij set the active profiles to 'local'
   - The JVM system parameter is ```-Dspring.profiles.active=local``` if using the command line
 - In an IDE you can run the application by right-clicking src/main/java/com.cmu.cps498.utility/IlUtilityApplication and selecting 'run'
-- You can alternatively run the application via cli by running ```./gradlew bootRun``` on MacOS or Linux or ```gradlew bootRun``` on Windows
+- You can alternatively run the application via cli by running ```./gradlew bootRun``` 
