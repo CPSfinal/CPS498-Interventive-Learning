@@ -13,6 +13,10 @@ java {
 	}
 }
 
+bootRun {
+	args = ['--spring.profiles.active=local']
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
