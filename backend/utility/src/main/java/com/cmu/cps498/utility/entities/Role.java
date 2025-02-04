@@ -2,7 +2,7 @@
  *  Dev: Seth Glover
  *  Description: This defines the role of the user. 
  */
-package com.cmu.cps498.utility.users;
+package com.cmu.cps498.utility.entities;
 
 //enum for user roles. This creates strong typing and prevents typos.
 // premision levels for the users should be defined in the database. 
