@@ -2,6 +2,7 @@ package com.cmu.cps498.utility.services;
 
 import com.cmu.cps498.utility.dtos.LoginUserDto;
 import com.cmu.cps498.utility.dtos.RegisterUserDto;
+import com.cmu.cps498.utility.entities.Role;
 import com.cmu.cps498.utility.entities.User;
 import com.cmu.cps498.utility.repositories.UserRepository;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,7 @@ public class AuthService {
         User user = new User();
         user.setEmail(input.getEmail());
         user.setPassword(passwordEncoder.encode(input.getPassword())); // Currently using Argon2
+        user.setRole(Role.USER);
         return userRepository.save(user);
     }
 
