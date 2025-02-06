@@ -17,7 +17,7 @@ public class AdminService {
         var user = new User();
         user.setEmail(teacher.getEmail());
         user.setPassword(encoder.encode(teacher.getPassword()));
-        user.setRole(Role.ADMIN);
+        user.setRole(Role.TEACHER);
 
         return repository.save(user);
     }
