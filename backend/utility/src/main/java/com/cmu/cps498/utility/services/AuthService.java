@@ -22,7 +22,7 @@ public class AuthService {
     public User signup(RegisterUserDto input) {
         User user = new User();
         user.setEmail(input.getEmail());
-        user.setPassword(passwordEncoder.encode(input.getPassword()));
+        user.setPassword(passwordEncoder.encode(input.getPassword())); // Currently using Argon2
         return userRepository.save(user);
     }
 
@@ -30,9 +30,7 @@ public class AuthService {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         input.getEmail(),
-                        input.getPassword()
-                )
-        );
+                        input.getPassword()));
 
         return userRepository.findByEmail(input.getEmail())
                 .orElseThrow();
