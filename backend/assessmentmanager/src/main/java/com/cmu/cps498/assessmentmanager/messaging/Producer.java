@@ -8,11 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 @AllArgsConstructor
 public class Producer {
-    private RabbitTemplate rabbitTemplate;
+    private final RabbitTemplate rabbitTemplate;
 
-    public void sendMessage(String message)
-    {
-        rabbitTemplate.convertAndSend(
-                RabbitMQConfig.topicExchangeName, RabbitMQConfig.routingKey, message);
+    public void sendAssessment(String assessmentData) {
+        rabbitTemplate.convertAndSend(RabbitMQConfig.topicExchangeName, "", assessmentData);
+        System.out.println("Assessment sent: " + assessmentData);
     }
 }
