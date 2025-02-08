@@ -78,8 +78,7 @@ const Header = () => {
 
         {/* Search, Sign-in, and Sign-up */}
         <div className="actions">
-          <input type="text" placeholder="Search..." className="search-bar" />
-          <Link to="/signin" className="sign-in">
+          <Link to="/login" className="sign-in">
             Sign In
           </Link>
         </div>

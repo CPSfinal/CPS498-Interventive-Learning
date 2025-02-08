@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/Pages/LoginPage.scss";
 
-const LoginPage = () => {
+const SigninPage = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
@@ -13,7 +13,7 @@ const LoginPage = () => {
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form">
-        <h2>Sign In</h2>
+        <h2>Create an Account</h2>
 
         <div className="form-field-container">
           <label htmlFor="email">Email</label>
@@ -39,10 +39,10 @@ const LoginPage = () => {
         </div>
         <div className="login-flex">
           <p>
-            Need an account? <a href="/signup">Sign Up Now.</a>
+            Already have an account? <a href="/login">Click here to login.</a>
           </p>
-          <button type="submit" className="login-button">
-            Login
+          <button type="submit" className="signup-button">
+            Sign Up
           </button>
         </div>
       </form>
@@ -50,4 +50,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SigninPage;
