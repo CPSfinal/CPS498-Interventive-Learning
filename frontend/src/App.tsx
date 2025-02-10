@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
 import HomePage from "./pages/HomePage";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import LoginPage from "./pages/LoginPage";
@@ -9,6 +10,7 @@ import "./Styles/Components/App.scss";
 
 const App = () => {
   return (
+    <AuthProvider>
     <div className="App">
       <Header />
       <Routes>
@@ -25,6 +27,7 @@ const App = () => {
       </Routes>
       <Footer />
     </div>
+    </AuthProvider>
   );
 };
 

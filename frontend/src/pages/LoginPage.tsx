@@ -1,13 +1,19 @@
 import React from "react";
 import "../Styles/Pages/LoginPage.scss";
+import { useAuth } from "../context/AuthContext";
 
 const LoginPage = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // used for storing JWT token after logging in
+  const { login } = useAuth();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Logging in with:", email, password);
+
+    // login with the auth context
+    login(email, password);
   };
 
   return (
