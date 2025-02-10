@@ -55,7 +55,7 @@
 !**/gradle/wrapper/gradle-wrapper.jar
 
 # Sensitive data
-**/application*.properties
+**/application-*.properties
 **/env.properties
 **/credentials.yml
 **/keystore.jks
