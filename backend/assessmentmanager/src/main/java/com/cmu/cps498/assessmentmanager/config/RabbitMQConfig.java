@@ -27,11 +27,6 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public String queueName() {
-        return "student.queue.1"; // should be set dynamically
-    }
-
-    @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
