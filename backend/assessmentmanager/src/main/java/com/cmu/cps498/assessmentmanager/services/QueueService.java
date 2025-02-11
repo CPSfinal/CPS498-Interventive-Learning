@@ -15,7 +15,7 @@ public class QueueService {
     private final RabbitAdmin rabbitAdmin;
     private final FanoutExchange assessmentExchange;
 
-    public String registerStudent(String id) {
+    public String registerStudent(long id) {
         String queueName = "student.queue." + id;
 
         Queue queue = new Queue(queueName, true);
