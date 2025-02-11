@@ -83,7 +83,7 @@
 
                 p {
                   margin: 0.25rem 0;
-                  font-size: 0.875rem;
+                  font-size: medium;
                   color: $background-color;
                 }
               }
@@ -126,11 +126,16 @@
         }
       }
 
-      .sign-in {
+      .sign-in, .acct-button {
+        font-size: medium;
+        font-weight: bold;
+        padding: 0;
+
         color: $button-color;
         background-color: transparent;
         border: none;
-        margin-right: 0.5rem;
+        margin-right: 1.5rem;
+
       }
 
       .sign-up {
