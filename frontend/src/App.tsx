@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import HomePage from "./pages/HomePage";
-import TeacherDashboard from "./pages/TeacherDashboard";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+import HomePage from "./Pages/HomePage";
+import TeacherDashboard from "./Pages/TeacherDashboard";
+import LoginPage from "./Pages/LoginPage";
+import SignupPage from "./Pages/SignupPage";
 import Header from "./Components_JS/Header";
 import Footer from "./Components_JS/Footer";
 import "./Styles/Components/App.scss";

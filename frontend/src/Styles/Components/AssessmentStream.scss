@@ -1,0 +1,44 @@
+@use "../variables" as *;
+@use "sass:color";
+
+.assessment-stream {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .student-table th,
+  .student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .student-table th {
+    background-color: #f4f4f4;
+  }
+  
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  .buttons {
+    margin-top: 15px;
+  }
+  
+  .start-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

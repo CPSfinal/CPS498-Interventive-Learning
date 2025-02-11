@@ -1,0 +1,38 @@
+@use "../variables" as *;
+@use "sass:color";
+
+.math-tab {
+  display: flex; 
+  flex-direction: column; /* Keep title on top */
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: $border-color;
+  border-radius: 5px;
+  background-color: $background-color;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* New flex container */
+.content-container {
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%;
+  max-width: 1200px; /* Limits total width */
+  gap: 20px; /* Space between the two sections */
+}
+
+/* Standards on the left */
+.standards-section {
+  flex: 1; /* Takes up equal space */
+  min-width: 250px;
+  max-width: 300px; /* Optional: Control width */
+}
+
+/* Assessments on the right */
+.assessment-section {
+  flex: 2; /* Takes more space */
+}

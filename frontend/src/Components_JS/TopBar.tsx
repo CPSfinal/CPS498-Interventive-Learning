@@ -4,9 +4,12 @@ import "../Styles/Components/TopBar.scss";
 const tabs = ["Reading", "Math", "Classes", "Settings"] as const;
 type TabType = (typeof tabs)[number];
 
-const TopBar: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState<TabType>("Math");
+interface TopBarProps {
+  selectedTab: TabType;
+  setSelectedTab: (tab: TabType) => void;
+}
 
+const TopBar: React.FC<TopBarProps> = ({selectedTab, setSelectedTab}) => {
   return (
     <section className="top-bar">
       <h2 className="subject">Dashboard</h2>
@@ -16,10 +19,8 @@ const TopBar: React.FC = () => {
             <li key={tab} role="presentation">
               <button
                 className={`tab-button ${
-                  selectedTab === tab ? "selected" : ""
-                }`}
+                  selectedTab === tab ? "selected" : ""}`}
                 role="tab"
-                aria-selected={selectedTab === tab}
                 onClick={() => setSelectedTab(tab)}
               >
                 {tab}
