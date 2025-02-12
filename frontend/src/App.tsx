@@ -21,8 +21,8 @@ const App = () => {
         {/* Teacher Dashboard Route */}
         <Route path="/teacher-dashboard" element={
           <TeacherDashboardProvider>
-          <TeacherDashboard /> 
-        </TeacherDashboardProvider>
+            <TeacherDashboard /> 
+          </TeacherDashboardProvider>
         } />
         {/* Login Page Route */}
         <Route path="/login" element={<LoginPage />} />

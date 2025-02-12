@@ -27,7 +27,7 @@ const TeacherDashboard: React.FC = () => {
   return (
     <div className="teacher-dashboard">
       <div className="main-section">
-      <TopBar selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> {/* ✅ Use context values */}
+      <TopBar selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> {/*Use context values */}
         <div className="main-content">
           {tabs[selectedTab]}
         </div>
