@@ -1,21 +1,20 @@
 import React from "react";
 import AssessmentStream from "./AssessmentStream";
 import StandardsDisplay from "./StandardViewer";
+import { useTeacherDashboard } from "../context/TeacherContext";
 import "../Styles/Components/Tab.scss";
 
 const MathTab: React.FC = () => {
+  const { students, loading, toggleStudentSelection } = useTeacherDashboard();
+
   return (
     <section>
-      
       <div className="content-container">
-        {/* Standards on the left */}
         <div className="standards-section">
           <StandardsDisplay />
         </div>
-        
-        {/* Assessments on the right */}
         <div className="assessment-section">
-          <AssessmentStream />
+          <AssessmentStream students={students} loading={loading} onUpdateStudents={toggleStudentSelection} />
         </div>
       </div>
     </section>

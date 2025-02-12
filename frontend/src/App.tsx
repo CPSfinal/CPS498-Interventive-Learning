@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import HomePage from "./Pages/HomePage";
 import TeacherDashboard from "./Pages/TeacherDashboard";
+import { TeacherDashboardProvider } from "./context/TeacherContext";
 import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import Header from "./Components_JS/Header";
@@ -18,8 +19,11 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
 
         {/* Teacher Dashboard Route */}
-        <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
-
+        <Route path="/teacher-dashboard" element={
+          <TeacherDashboardProvider>
+          <TeacherDashboard /> 
+        </TeacherDashboardProvider>
+        } />
         {/* Login Page Route */}
         <Route path="/login" element={<LoginPage />} />
         {/* Signup Page Route */}
