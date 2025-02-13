@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
-import "../Styles/Pages/LoginPage.scss";
-import UTILITY_URL from "../config";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AuthForm from '../Components_JS/AuthForm'; // import compound component
+import UTILITY_URL from '../config';
+import '../Styles/Pages/LoginPage.scss';
 
 const SigninPage = () => {
   const [email, setEmail] = React.useState("");
@@ -27,7 +28,7 @@ const SigninPage = () => {
 
     // dont submit is passwords dont match
     if (password !== passwordConfirm) {
-      setOutputMessage("Passwords don't Match")
+      setOutputMessage("Passwords don't Match");
       return;
     }
 
@@ -61,61 +62,34 @@ const SigninPage = () => {
     };
 
   return (
-    
-    <div className="login-container">
-      <form onSubmit={handleSubmit} className="login-form">
-        <p className="error-label">{outputMessage}</p>
-        
-        <h2>Create an Account</h2>
-
-        <div className="form-field-container">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="login-input"
-            disabled={loading}
-          />
-        </div>
-        <div className="form-field-container">
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="login-input"
-            disabled={loading}
-          />
-        </div>
-        
-        <div className="form-field-container">
-        <label htmlFor="password-confirm">Confirm Password</label>
-          <input
-            id="password-confirm"
-            type="password"
-            placeholder="Confirm Password"
-            value={passwordConfirm}
-            onChange={(e) => setPasswordConfirm(e.target.value)}
-            className="login-input"
-            disabled={loading}
-          />
-          </div>
-
-        <div className="login-flex">
-          <p>
-            Already have an account? <a href="/login">Click here to login.</a>
-          </p>
-          <button type="submit" className="signup-button" disabled={loading}>
-            Sign Up
-          </button>
-        </div>
-      </form>
-    </div>
+    <AuthForm onSubmit={handleSubmit} loading={loading} outputMessage={outputMessage}>
+      <h2>Create an Account</h2>
+      <AuthForm.InputField
+        id="email"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+        disabled={loading}
+      />
+      <AuthForm.InputField
+        id="password"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Password"
+        disabled={loading}
+      />
+      <AuthForm.InputField
+        id="password-confirm"
+        type="password"
+        value={passwordConfirm}
+        onChange={(e) => setPasswordConfirm(e.target.value)}
+        placeholder="Confirm Password"
+        disabled={loading}
+      />
+      <AuthForm.SubmitButton disabled={loading}>Sign Up</AuthForm.SubmitButton>
+    </AuthForm>
   );
 };
 

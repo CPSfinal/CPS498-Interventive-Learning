@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/Pages/LoginPage.scss";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import AuthForm from "../Components_JS/AuthForm";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -41,46 +42,26 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-container">
-      
-      <form onSubmit={handleSubmit} className="login-form">
-      <p className="error-label">{errorMessage}</p>
-        <h2>Sign In</h2>
-
-        <div className="form-field-container">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="login-input"
-            disabled={loading}
-          />
-        </div>
-        <div className="form-field-container">
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="login-input"
-            disabled={loading}
-          />
-        </div>
-        <div className="login-flex">
-          <p>
-            Need an account? <a href="/signup">Sign Up Now.</a>
-          </p>
-          <button type="submit" className="login-button" disabled={loading}>
-            Login
-          </button>
-        </div>
-      </form>
-    </div>
+    <AuthForm onSubmit={handleSubmit} loading={loading} outputMessage={errorMessage}>
+      <h2>Sign In</h2>
+      <AuthForm.InputField
+        id="email"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+        disabled={loading}
+      />
+      <AuthForm.InputField
+        id="password"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Password"
+        disabled={loading}
+      />
+      <AuthForm.SubmitButton disabled={loading}>Login</AuthForm.SubmitButton>
+    </AuthForm>
   );
 };
 
