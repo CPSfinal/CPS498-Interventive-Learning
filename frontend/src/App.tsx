@@ -7,7 +7,9 @@ import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import Header from "./Components_JS/Header";
 import Footer from "./Components_JS/Footer";
+import { useAuth } from "./context/AuthContext";
 import "./Styles/Components/App.scss";
+import ProtectedRoute from "./context/ProtectedRoute";
 
 const App = () => {
   return (
@@ -21,7 +23,7 @@ const App = () => {
         {/* Teacher Dashboard Route */}
         <Route path="/teacher-dashboard" element={
           <TeacherDashboardProvider>
-            <TeacherDashboard /> 
+            <ProtectedRoute><TeacherDashboard /></ProtectedRoute>
           </TeacherDashboardProvider>
         } />
         {/* Login Page Route */}

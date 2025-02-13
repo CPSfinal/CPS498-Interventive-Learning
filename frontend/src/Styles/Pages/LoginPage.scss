@@ -33,6 +33,7 @@
 .login-form {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   background-color: #ffffff;
   padding: 96px 96px;
@@ -64,6 +65,27 @@
       background-color: #dbdbdb;
     }
   }
+
+  .error-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    background-color: $secondary-color;
+    font-size: large;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    display: none; /* Hide by default */
+  }
+
+  .error-label:not(:empty) {
+      display: block;
+  }
+
 
   .form-field-container {
     display: flex;

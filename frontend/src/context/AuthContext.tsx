@@ -5,6 +5,7 @@ import UTILITY_URL from "../config";
 interface AuthContextType {
     token: string | null;
     login: (email: string, password: string) => Promise<void>;
+    getToken: () => String | null;
     logout: () => void;
 }
 
@@ -18,6 +19,9 @@ interface AuthProviderProps {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
     const [token, setToken] = useState<string | null>(localStorage.getItem("token"));
+
+    // Function to get token
+    const getToken = (): string | null => token;
 
     // Function to log in and store the token
     const login = async (email: string, password: string) => {
@@ -57,7 +61,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ token, login, logout }}>
+        <AuthContext.Provider value={{ token, login, logout, getToken }}>
             {children}
         </AuthContext.Provider>
     );
