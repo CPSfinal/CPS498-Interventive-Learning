@@ -9,7 +9,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import com.cmu.cps498.utility.entities.School;
 
 @Table(name = "users")
 @Entity
@@ -24,11 +28,18 @@ public class User implements UserDetails {
     @Column(unique = true, length = 100, nullable = false)
     private String email;
 
+    @ManyToOne
+    @JoinColumn(name = "school_id", nullable = true)
+    private School school;
+
     @Column(nullable = false)
     private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+//    @ManyToMany(mappedBy = "students")
+//    private Set<Course> courses = new HashSet<>();
 
     @Column(nullable = false)
     private boolean isActive = true; // not sure if this needs to be in the database or if

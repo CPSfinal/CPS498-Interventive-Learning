@@ -41,8 +41,9 @@ dependencies {
 
 	implementation 'org.bouncycastle:bcprov-jdk15on:1.70'
 	implementation 'org.bouncycastle:bc-fips:1.0.2'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
-	compileOnly 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
