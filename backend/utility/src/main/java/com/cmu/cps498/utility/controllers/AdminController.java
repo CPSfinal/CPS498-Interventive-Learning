@@ -1,9 +1,7 @@
 package com.cmu.cps498.utility.controllers;
 
-import com.cmu.cps498.utility.dtos.AssignStudentDto;
-import com.cmu.cps498.utility.dtos.RegisterUserDto;
-import com.cmu.cps498.utility.dtos.RegisterSchoolDto;
-import com.cmu.cps498.utility.dtos.AddCourseDto;
+import com.cmu.cps498.utility.dtos.*;
+import com.cmu.cps498.utility.entities.Assessment;
 import com.cmu.cps498.utility.entities.User;
 import com.cmu.cps498.utility.entities.School;
 import com.cmu.cps498.utility.entities.Course;
@@ -62,6 +60,13 @@ public class AdminController {
     public ResponseEntity<String> assignStudent(@RequestBody AssignStudentDto assignStudent) {
         System.out.print("hit");
         return ResponseEntity.ok(service.AssignStudent(assignStudent));
+    }
+
+    @PostMapping("/createAssessment")
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    public ResponseEntity<Assessment> createAssessment(@RequestBody CreateAssessmentDto newAssessment) {
+        System.out.print("hit");
+        return ResponseEntity.ok(service.createAssessment(newAssessment));
     }
 
 }

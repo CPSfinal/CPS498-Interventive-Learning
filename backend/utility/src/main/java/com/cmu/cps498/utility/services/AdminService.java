@@ -1,12 +1,7 @@
 package com.cmu.cps498.utility.services;
-import com.cmu.cps498.utility.dtos.AssignStudentDto;
-import com.cmu.cps498.utility.dtos.RegisterSchoolDto;
-import com.cmu.cps498.utility.dtos.RegisterUserDto;
-import com.cmu.cps498.utility.dtos.AddCourseDto;
-import com.cmu.cps498.utility.entities.Role;
-import com.cmu.cps498.utility.entities.User;
-import com.cmu.cps498.utility.entities.School;
-import com.cmu.cps498.utility.entities.Course;
+import com.cmu.cps498.utility.dtos.*;
+import com.cmu.cps498.utility.entities.*;
+import com.cmu.cps498.utility.repositories.AssessmentRepository;
 import com.cmu.cps498.utility.repositories.SchoolRepository;
 import com.cmu.cps498.utility.repositories.UserRepository;
 import com.cmu.cps498.utility.repositories.CourseRepository;
@@ -23,6 +18,7 @@ public class AdminService {
     private SchoolRepository schoolRepository;
     private UserRepository repository;
     private CourseRepository courseRepository;
+    private AssessmentRepository AssessmentRepository;
     private PasswordEncoder encoder;
     public User createTeacher(RegisterUserDto teacher) {
         var user = new User();
@@ -51,11 +47,11 @@ public class AdminService {
 
     public Course createCourse(AddCourseDto course) {
         var newCourse = new Course();
-        newCourse.setName(course.getCourseName());
-        newCourse.setContentId(course.getContentId());
-        newCourse.setGrade(course.getGrade());
-        newCourse.setSubject(course.getSubject());
-        newCourse.setTeacherId(course.getTeacherId());
+        newCourse.setName(course.courseName());
+        newCourse.setContentId(course.contentId());
+        newCourse.setGrade(course.grade());
+        newCourse.setSubject(course.subject());
+        newCourse.setTeacherId(course.teacherId());
         return courseRepository.save(newCourse);
 
     }
@@ -67,6 +63,7 @@ public class AdminService {
         if (optionalCourse.isEmpty() || optionalStudent.isEmpty()) {
             return("Not found");
         }
+
         Course course = optionalCourse.get();
         User student = optionalStudent.get();
 
@@ -78,6 +75,22 @@ public class AdminService {
         //hold on to this line of code for the same reason
         //repository.save(student);
         return("Success");
+    }
+
+    public Assessment createAssessment(CreateAssessmentDto assessmentDto) {
+        if(assessmentDto.answers().size() != assessmentDto.questions().size()) {
+            //this check should ideally never be triggered
+            return(null);
+        }
+        Assessment newAssessment = new Assessment();
+
+        newAssessment.setName(assessmentDto.courseName());
+        newAssessment.setSkillId(assessmentDto.skillId());
+        newAssessment.setQuestions(assessmentDto.questions());
+        newAssessment.setAnswers(assessmentDto.answers());
+
+        return AssessmentRepository.save(newAssessment);
+
     }
 
 
