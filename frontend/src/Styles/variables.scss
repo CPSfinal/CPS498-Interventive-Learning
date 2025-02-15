@@ -2,6 +2,7 @@
 // Color Palette
 $primary-color: #81c784;
 $secondary-color: #c8e6c9;
+$dark-green: #388E3C;
 $tirtiary-color: #83c19e;
 $accent-color: #f7e64b; // Orange
 $background-color: #f4f4f4; // Light Gray Background
@@ -29,6 +30,9 @@ $button-hover-color: color.adjust(
   $button-color,
   $lightness: -10%
 ); // Button hover effect
+
+//forms
+$form-label-color: rgba(0, 0, 0, .4);
 
 //shadows & borders
 $shadow-color: rgba(0, 0, 0, 0.1); // Shadow color
