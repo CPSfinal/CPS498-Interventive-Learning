@@ -53,6 +53,18 @@ button {
       color: $secondary-color;
     }
   }
+
+  &.logout {
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    padding: 8px 12px;
+    background-color: #cb1919;
+
+    &:hover {
+      background-color: #cb1919dc;
+    }
+  }
 }
 
 // Utility Classes
