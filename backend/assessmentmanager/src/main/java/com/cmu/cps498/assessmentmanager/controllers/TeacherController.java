@@ -1,25 +1,20 @@
 package com.cmu.cps498.assessmentmanager.controllers;
 
-import com.cmu.cps498.assessmentmanager.messaging.Producer;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/teachers")
 @AllArgsConstructor
 public class TeacherController {
 
-    private Producer producer;
-
     @PostMapping("/assessment")
     @PreAuthorize("hasRole('TEACHER')")
     public ResponseEntity<String> postAssessment(@RequestBody String assessmentData) {
-        producer.sendAssessment(assessmentData);
+        //Todo: post assessment on exchange
         return ResponseEntity.ok("Send assessment");
     }
 }

@@ -9,13 +9,6 @@ import org.springframework.context.annotation.Bean;
 
 @Configuration
 public class RabbitMQConfig {
-    public  static final String topicExchangeName = "assessment-exchange";
-
-    @Bean
-    public FanoutExchange assessmentExchange() {
-        return new FanoutExchange(topicExchangeName);
-    }
-
     @Bean
     public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory) {
         return new RabbitAdmin(connectionFactory);
